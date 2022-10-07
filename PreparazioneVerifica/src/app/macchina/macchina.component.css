@@ -1,3 +1,5 @@
-.card-body {
-    background-color: lightblue
+.card {
+    background-color: lightblue;
+    width: 20%;
+    left: 40%;
 }
