@@ -7,8 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MacchinaComponent implements OnInit {
   @Input() macchina: string; // <-- Aggiungi la notazione @input
+  pezzi: string[];
   constructor() { 
-
+    this.pezzi = ["viti", "bulloni", "ferro"];
   }
 
   ngOnInit(): void {
