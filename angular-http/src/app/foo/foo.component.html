@@ -1,1 +1,13 @@
-<p>foo works!</p>
+<head>
+
+</head>
+
+<body>
+    <h2>Basic Request</h2>
+    <button type="button" (click)="makeCompactRequest()">Make Request</button>
+    <div *ngIf="loading">loading...</div>
+    <pre>{{data | json}}</pre>
+    <hr>
+    <button type="button" (click)="makeCompactPost()">Post</button>
+    <div *ngIf="loading">loading...</div>
+</body>
