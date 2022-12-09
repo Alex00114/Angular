@@ -14,8 +14,8 @@ export class AppComponent implements OnInit{
   obsRooms!: Observable<Reservation[]>;
   data!: Reservation[];
   selectedRoom: Room = new Room();
-  show:boolean = true;
-  buttonName:any = 'Nascondi';
+  show: boolean = true;
+  buttonName: string = 'Nascondi';
 
   constructor(public http:HttpClient){
 
