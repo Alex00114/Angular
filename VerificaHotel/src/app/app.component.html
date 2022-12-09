@@ -1,3 +1,9 @@
-<app-lista-pren [listaPren] = "data" [stanza] = "selectedRoom"></app-lista-pren>
+<button (click)="toggle()" id="bt">
+    {{buttonName}}
+</button>
+
+<div *ngIf="show">
+    <app-lista-pren [listaPren] = "data" [stanza] = "selectedRoom"></app-lista-pren>    
+</div>
 
 <app-dettagli-stanza [stanza] = "selectedRoom"></app-dettagli-stanza>

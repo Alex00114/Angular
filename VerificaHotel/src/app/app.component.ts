@@ -14,6 +14,8 @@ export class AppComponent implements OnInit{
   obsRooms!: Observable<Reservation[]>;
   data!: Reservation[];
   selectedRoom: Room = new Room();
+  show:boolean = true;
+  buttonName:any = 'Nascondi';
 
   constructor(public http:HttpClient){
 
@@ -26,5 +28,15 @@ export class AppComponent implements OnInit{
 
   faiqualcosa = (data: Reservation[]) => {
     this.data = data;
+  }
+
+  toggle() {
+    this.show = !this.show;
+
+    // Change the name of the button.
+    if(this.show)  
+      this.buttonName = "Nascondi";
+    else
+      this.buttonName = "Mostra";
   }
 }

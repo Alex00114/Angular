@@ -1,9 +1,9 @@
 <h2>Ecco le prenotazioni delle stanze</h2>
 <div *ngFor = "let r of listaPren">
-    {{r.from}} <br>
-    {{r.to}} <br>
-    {{r.name}} <br>
-    {{r.surname}} <br>
+    da: {{r.from}} <br>
+    fino: {{r.to}} <br>
+    nome: {{r.name}} <br>
+    cognome: {{r.surname}} <br>
     <button (click) = "mostraDett(r.room)">Mostra dettagli stanza</button>
     <hr>
 </div>
