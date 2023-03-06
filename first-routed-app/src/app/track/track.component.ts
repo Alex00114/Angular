@@ -47,6 +47,4 @@ export class TrackComponent implements OnInit{
   back() : void {
     this.location.back();
   }
-
-
 }
