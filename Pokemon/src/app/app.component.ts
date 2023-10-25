@@ -10,18 +10,18 @@ import { Risultati } from './models/risultati.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  obsPokemon!: Observable<any>;
-  data!: any;
+  obsPokemon!: Observable<Risultati[]>;
+  data!: Risultati[];
 
   constructor(public http:HttpClient){ }
 
 
   ngOnInit(): void {
-    this.obsPokemon = this.http.get<any>('https://pokeapi.co/api/v2/type')
+    this.obsPokemon = this.http.get<Risultati[]>('https://pokeapi.co/api/v2/type')
     this.obsPokemon.subscribe(this.faiqualcosa)
   }
 
-  faiqualcosa = (data: any) => {
+  faiqualcosa = (data: Risultati[]) => {
     this.data = data;
     console.log(data);
   }
