@@ -2,5 +2,7 @@ import { Pokemon } from "./pokemon.model";
 
 export class Risultati {
     count!: number;
-    results!: Pokemon;
+    next!: string;
+    previous!: string;
+    results!: Pokemon[];
 }
