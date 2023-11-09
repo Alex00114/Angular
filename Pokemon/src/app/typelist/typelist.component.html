@@ -1,5 +1,5 @@
 <h2>Ecco i tipi dei Pokémon:</h2>
 <div *ngFor = "let t of data.results">
-    {{t.name}} <br>
+    <a [routerLink]= "['/pokemon', t.url.split('/')[6]]"> <h3>{{t.name}}</h3> </a> <br>
     <hr>
 </div>

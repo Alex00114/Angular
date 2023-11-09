@@ -10,21 +10,9 @@ import { Risultati } from './models/risultati.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  obsPokemon!: Observable<Object>;
-  data!: any;
 
-  constructor(public http:HttpClient){ }
+  constructor(){ }
 
-
-  ngOnInit(): void {
-    this.obsPokemon = this.http.get<any>('https://pokeapi.co/api/v2/type')
-    this.obsPokemon.subscribe(this.faiqualcosa)
-  }
-
-  faiqualcosa = (data: any) => {
-    this.data = data;
-    console.log(data);
-  }
-
+  ngOnInit(): void { }
 
 }
