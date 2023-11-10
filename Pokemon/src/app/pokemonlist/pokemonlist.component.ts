@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { PokemonService } from '../pokemon.service';
 
@@ -13,7 +13,7 @@ export class PokemonlistComponent implements OnInit{
   pokemon: any;
   pokemonServiceObs!: Observable<any>;
 
-  constructor (private route: ActivatedRoute, private pokemonService: PokemonService, private location : Location) {}
+  constructor (private route: ActivatedRoute, private router: Router, private pokemonService: PokemonService) {}
 
   ngOnInit(): void {
     this.routeObs = this.route.paramMap;
@@ -28,6 +28,7 @@ export class PokemonlistComponent implements OnInit{
     if (pokemonId != null) {
       this.pokemonServiceObs = this.pokemonService.getPokemon(pokemonId) ;
       this.pokemonServiceObs.subscribe((data)=>this.pokemon = data)
+      console.log(this.pokemon)
     }
   }
 

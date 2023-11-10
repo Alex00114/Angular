@@ -1,0 +1,29 @@
+<h2>Ecco i dettagli del Pokémon selezionato:</h2>
+
+<div *ngIf="pokemoninfo">
+    <h1>{{ pokemoninfo.name }}</h1>
+    <h3>Type:</h3>
+    <ul>
+      <div *ngFor="let tipo of pokemoninfo.types">
+        <li>{{ tipo.type.name }}</li>
+      </div>
+    </ul>
+    <h3>Abilities:</h3>
+    <ul *ngFor="let skill of pokemoninfo.abilities">
+        <li>
+          {{skill.ability.name}}
+        </li>
+    </ul>
+    <h3>Held Items:</h3>
+    <ul *ngFor="let item of pokemoninfo.held_items">
+        <li>
+          {{item.item.name}}
+        </li>
+    </ul>
+    <h3>Stats:</h3>
+    <ul *ngFor="let statistica of pokemoninfo.stats">
+        <li>
+          {{statistica.base_stat}} {{statistica.stat.name}}
+        </li>
+    </ul>
+</div>
