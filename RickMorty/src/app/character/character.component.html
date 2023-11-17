@@ -1,1 +1,6 @@
-<p>character works!</p>
+<h2>Ecco i personaggi di Rick&Morty:</h2>
+<div *ngFor = "let p of data.results">
+    <h3>{{p.name}}</h3><br>
+    <a [routerLink]= "['/characterInfo', p.url.split('/')[6]]"> <h3>{{p.name}}</h3> </a> <br>
+    <hr>
+</div>
