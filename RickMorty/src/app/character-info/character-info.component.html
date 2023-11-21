@@ -1,1 +1,11 @@
-<p>character-info works!</p>
+<h2>Ecco i dettagli di questo personaggio:</h2>
+
+<div *ngIf="personaggio">
+    <p> <img src="{{personaggio.image}}"> </p>
+    <p>Nome: {{personaggio.name}} </p> <br>
+    <p>Status: {{personaggio.status}} </p> <br>
+    <p>Species: {{personaggio.species}} </p> <br>
+    <p>Gender: {{personaggio.gender}} </p> <br>
+    <p>Origins: {{personaggio.origins.name}} </p> <br>
+</div>
+
